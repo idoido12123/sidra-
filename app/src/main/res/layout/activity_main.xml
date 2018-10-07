@@ -58,7 +58,7 @@
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
         android:hint="enter the first number of your progression"
-        android:textColorHint="@android:color/black"/>
+         android:textColorHint="@android:color/black"/>
 
     <EditText
         android:id="@+id/MultOrDif"
