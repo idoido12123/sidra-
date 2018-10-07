@@ -60,7 +60,6 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
        for (int i = 0; i < position; i++) {
         schum = schum + numbers[i];
       }
-
          tv1.setText("" + num1);
           tv2.setText("" + d);
          tv3.setText("" + position);
