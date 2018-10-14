@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    Intent get = getIntent();
+
     double num1, d;
     int typeprog;
     ListView lv1;
@@ -25,14 +25,18 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        typeprog = get.getIntExtra("typeProg", 0);
-        num1 = get.getDoubleExtra("firstNum", 0);
-        d = get.getDoubleExtra("d", 0);
+
         tv1=(TextView)findViewById(R.id.textView7);
         tv2 = (TextView) findViewById(R.id.textView8);
         tv3 = (TextView) findViewById(R.id.textView9);
         tv4 = (TextView) findViewById(R.id.textView10);
         lv1 = (ListView) findViewById(R.id.listview);
+
+        Intent get = getIntent();
+        typeprog = get.getIntExtra("typeProg", 666666666);
+        num1 = get.getDoubleExtra("firstNum", 6666666);
+        d = get.getDoubleExtra("d", 66666666);
+
         numbers[0] = num1;
         numbers2[0]=""+num1;
         if (typeprog == 1) {
@@ -57,7 +61,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
    @Override
    public void onItemClick(AdapterView<?> AdapterView, View view, int position, long id) {
-       for (int i = 0; i < position; i++) {
+       for (int i = 0; i <= position; i++) {
         schum = schum + numbers[i];
       }
          tv1.setText("" + num1);
